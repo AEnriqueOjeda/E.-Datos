@@ -1,7 +1,4 @@
-//
-// imports ES5
-// Node (Node4stu5es.js)
-//
+
 
 function Linked(n) {//node
     this.head = n//node
@@ -43,15 +40,5 @@ function traverse(){
 //
 // exercises
 //
-//function contains(v){}
+function contains(v){}
 function getTail(){}
-
-function contains(linked) {
-if (this.dataStore.indexOf(data) < 0) {
-this.dataStore.push(data);
-return true;
-}
-else {
-return false;
-}
-}
