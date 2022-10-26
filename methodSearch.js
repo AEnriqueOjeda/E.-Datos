@@ -9,7 +9,7 @@ function stack() {
     this.vacia = vacia
     this.input = input
     this.mostrar = mostrar
-    this.busqueda = busqueda
+    this.search = search
 } // ya
 function input(e) {
     if (this.llena()) {
@@ -46,16 +46,16 @@ function mostrar() {
   }
   return show
 }//ya
-function busqueda(SearchX) {
+function search(x) {
   for (let i = 0; i < this.size.length; i++) {
-    if (this.size[i] == SearchX) {
+    if (this.size[i] == x) {
       busq = i
     }
   }
   if (busq >= 0) {
-    return SearchX + " en posición: " + ((busq) + 1)
+    return x + " en posición: " + ((busq) + 1)
   } else {
-    return SearchX + " no encontrado"
+    return x + " no encontrado"
   }
 }
 function peek() {
@@ -68,6 +68,6 @@ stack1.input(6);
 stack1.input(8);
 stack1.input(9);
 console.log(stack1.mostrar());
-console.log(stack1.busqueda(10));
+console.log(stack1.search(10));
 console.log('El último elemento es: ',stack1.peek()); //ultimo elemento de la pila
 
