@@ -46,16 +46,16 @@ function mostrar() {
   }
   return show
 }//ya
-function busqueda(x) {
+function busqueda(SearchX) {
   for (let i = 0; i < this.size.length; i++) {
-    if (this.size[i] == x) {
+    if (this.size[i] == SearchX) {
       busq = i
     }
   }
   if (busq >= 0) {
-    return x + " en posición: " + ((busq) + 1)
+    return SearchX + " en posición: " + ((busq) + 1)
   } else {
-    return x + " no encontrado"
+    return SearchX + " no encontrado"
   }
 }
 function peek() {
