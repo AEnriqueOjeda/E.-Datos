@@ -14,7 +14,7 @@ function out() {
 function imprimir() {
     let show = ""
     for (let i = 0; i < this.size.length; ++i) {
-      show += this.size[i] + "\n"
+      show += this.size[i] + "  "
     }
     return show
 }

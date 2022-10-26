@@ -4,15 +4,18 @@
  *
  */ 
 //escribe algo ahi
-var mostrar = new cola(), isf = 0
+
+var cola1 = new cola(), isf = 0
 function cola() {
   this.size = []
-  this.max = 5
+  this.max = 7
   this.array = array
   this.out = out
   this.full = full
   this.empty = empty
   this.imprimir = imprimir
+  this.front = front
+  this.back = back
 }
 function empty() {
   if (this.size.length === isf)
@@ -22,7 +25,7 @@ function empty() {
 }
 function array(e) {
   if (this.full()) {
-    console.log("Queue is full")
+    console.log("Fila llena")
   }
   else {
     this.size.push(e)
@@ -30,7 +33,7 @@ function array(e) {
 }
 function out() {
   if (this.empty()) {
-    console.log("Queue is empty")
+    console.log("Fila vacia")
   }
   else {
     this.size.shift()
@@ -49,14 +52,24 @@ function full() {
   else
     return false
 }
+function front(){
+  return 'Primero en fila: ' + this.size[this.size.length - this.size.length]
+}
+function back(){
+  return 'Ultimo en fila: ' + this.size[this.size.length -1]
+}
 
-mostrar.array("Angel")
-mostrar.array("Eduardito")
-mostrar.array("Danielita")
-mostrar.array("Alesita")
-mostrar.array("Moransito")
-console.log(mostrar.imprimir())
-// fila.array("Kike")
+cola1.array("Angelito");
+cola1.array("Eduardito");
+cola1.array("Danielita");
+cola1.array("Alesita");
+cola1.array("Moransito");
+console.log(cola1.imprimir());
+//cola1.array("OtroName");
+//console.log(cola1.imprimir());
+//onsole.log(cola1.front());
+//console.log(cola1.back());
+
 
 
 

@@ -1,5 +1,4 @@
 var exute = [], taptop = [];
-
 function peek() {
     return this.size[0]
 }
@@ -14,12 +13,12 @@ function out() {
 function mostrar() {
     let show = ""
     for (let i = 0; i < this.size.length; ++i) {
-      show += this.size[i] + "\n"
+      show += this.size[i] + "  "
     }
     return show
 }
 function vacia() {
-    if (this.size.length === 0)
+    if (this.size.length <= 4)
       return true
     else
       return false
@@ -86,6 +85,7 @@ function stack(maximo) {
     this.input = input
     this.mostrar = mostrar
 }
+  
 ordena(10)
 exute[5] = (exute[0]+exute[1]+exute[2]+exute[3]+exute[4]) / (5)
 taptop[5] = (taptop[0]+taptop[1]+taptop[2]+taptop[3]+taptop[4]) / (5)
