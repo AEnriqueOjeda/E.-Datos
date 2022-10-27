@@ -12,8 +12,8 @@ listEnl.append(new Node('3'))
 //traverse
 listEnl.traverse(listEnl.getHead())
 //After
-listEnl.InsertAfter('2', new Node('5'))
+listEnl.IAfter('2', new Node('5'))
 listEnl.traverse(listEnl.getHead())
 //before
-listEnl.InsertBefore('2', new Node('6'))
+listEnl.IBefore('2', new Node('6'))
 listEnl.traverse(listEnl.getHead())

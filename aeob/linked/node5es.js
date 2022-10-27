@@ -3,33 +3,73 @@ export { Linked, Node }
 import Node from './node.js'
 
 function Linked(n) {//node
-  this.head = n//node
-  this.tail = n//node
-  this.size = 1
-  this.getHead = getHead
-  this.prepend = prepend
+  this.head = n
   this.append = append
   this.traverse = traverse
   this.contains = contains
   this.getTail = getTail
-  this.InsertAfter = InsertAfter
-  this.InsertBefore = InsertBefore
+  this.IAfter = IAfter
+  this.IBefore = IBefore
+  this.tail = n
+  this.size = 1
+  this.getHead = getHead
+  this.prepend = prepend
+  
+}
+
+function IAfter(ea, lo) {
+  let c = this.head, help; 
+  while (c) {
+    if (ea == c.data) {
+      help = c.next
+      c.next = lo
+      lo.next = help
+      console.log('\n')
+    } 
+    c = c.next
+  }
+} 
+
+function IBefore(ea, lo) {
+  let c = this.head, ant, help
+  if (c.next == null) {
+    this.prepend(lo)
+  } 
+  else {
+    if (ea != this.head.data) {
+      while (c) {
+        if (ea != c.data) {
+          ant = c
+         
+        } 
+        else {
+          help = ant.next
+          ant.next = lo
+          lo.next = help
+        }
+        c = c.next
+      }    console.log('\n') 
+    } 
+    else {
+      this.prepend(o)
+    }
+  }
 }
 
 export function getHead() {
   return this.head
 }
 
-export function prepend(n) {
-  n.next = this.head
-  this.head = n
+export function prepend(num) {
+  num.next = this.head
+  this.head = num
   this.size++
 }
 
-export function append(n) {
-  n.next = null
-  this.tail.next = n
-  this.tail = n
+export function append(num) {
+  num.next = null
+  this.tail.next = num
+  this.tail = num
   this.size++
 }
 
@@ -39,66 +79,31 @@ export function traverse() {
     console.log(c.data)
     c = c.next
   }
-  console.log('\n')
 }
 
-export function contains(v) {
-  let c = this.head, enc = "";
-  while (c) {
-    if (v == c.data) {
-      enc = c.data
+export function contains(value) {
+  let count = this.head, enc = " ";
+  while (count) {
+    if (value == count.data) {
+      enc = count.data
     }
-    c = c.next
+    count = count.next
   }
-  if (enc == v) {
+  if (enc == value) {
     return 'Elemento ' + enc + ' encontrado'
-  } else {
+  } 
+  else {
     return 'Elemento no encontrado'
   }
 }
+
 export function getTail() {
   let c = this.head
-  var t = ""
+  var t = " "
   while (c) {
     t = c.data
     c = c.next
-  }
+  } 
   return t
 }
 
-function InsertAfter(v, o) {
-  let c = this.head
-  let aux;
-  while (c) {
-    if (v == c.data) {
-      aux = c.next
-      c.next = o
-      o.next = aux
-    }
-    c = c.next
-  }
-}
-function InsertBefore(v, o) {
-  let c = this.head, ant, help
-  if (c.next == null) {
-    this.prepend(o)
-  } 
-  else {
-    if (v != this.head.data) {
-      while (c) {
-        if (v != c.data) {
-          ant = c
-        } 
-        else {
-          help = ant.next
-          ant.next = o
-          o.next = help
-        }
-        c = c.next
-      }
-    } 
-    else {
-      this.prepend(o)
-    }
-  }
-}

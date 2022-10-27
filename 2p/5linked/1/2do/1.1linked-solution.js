@@ -12,4 +12,4 @@ listEnl.traverse(listEnl.getHead())
 //listEnl.contains(2)
 console.log(listEnl.getTail())
 //encntrar elemento -->
-//console.log(listEnl.contains('4'))
+console.log(listEnl.contains('4'))
