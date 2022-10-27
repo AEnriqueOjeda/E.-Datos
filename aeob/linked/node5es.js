@@ -1,12 +1,12 @@
-//
-// imports ES5
-// Node (Node4stu5es.js)
-//
+export { Linked, Node }
 
-export default function Linked(n) {//node
+import Node from './node.js'
+
+function Linked(n) {//node
   this.head = n//node
   this.tail = n//node
   this.size = 1
+
   this.getHead = getHead
   this.prepend = prepend
   this.append = append
