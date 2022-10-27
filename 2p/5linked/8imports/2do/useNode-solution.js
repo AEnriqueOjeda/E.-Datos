@@ -4,15 +4,16 @@
  *
  */
 import { Linked, Node } from '../../../../aeob/linked/node5es.js'
-let n1 = new Node('a')
-let n2 = new Node('b')
 
-let l = new Linked(n1)
-l.append(n2)
-l.append(new Node('c'))
-l.traverse(l.getHead())
-l.InsertAfter('b', new Node('e'))
-l.traverse(l.getHead())
+var nodo1 = new Node('1'), nodo2 = new Node('2'), listEnl = new Linked(nodo1)
 
-l.InsertBefore('b', new Node('f'))
-l.traverse(l.getHead())
+listEnl.append(nodo2)
+listEnl.append(new Node('3'))
+//traverse
+listEnl.traverse(listEnl.getHead())
+//After
+listEnl.InsertAfter('2', new Node('5'))
+listEnl.traverse(listEnl.getHead())
+//before
+listEnl.InsertBefore('2', new Node('6'))
+listEnl.traverse(listEnl.getHead())

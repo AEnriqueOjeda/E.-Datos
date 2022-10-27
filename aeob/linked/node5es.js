@@ -6,7 +6,6 @@ function Linked(n) {//node
   this.head = n//node
   this.tail = n//node
   this.size = 1
-
   this.getHead = getHead
   this.prepend = prepend
   this.append = append
@@ -21,14 +20,14 @@ export function getHead() {
   return this.head
 }
 
-export function prepend(n) {//new node
+export function prepend(n) {
   n.next = this.head
   this.head = n
   this.size++
 }
 
-export function append(n) {//new node
-  n.next = null//
+export function append(n) {
+  n.next = null
   this.tail.next = n
   this.tail = n
   this.size++
@@ -36,30 +35,25 @@ export function append(n) {//new node
 
 export function traverse() {
   let c = this.head
-  while (c) {//exists
-    //console.log(c.key)
+  while (c) {
     console.log(c.data)
     c = c.next
   }
   console.log('\n')
 }
 
-//
-// exercises
-//
 export function contains(v) {
-  let c = this.head
-  let enc = "";
-  while (c) {//exists
+  let c = this.head, enc = "";
+  while (c) {
     if (v == c.data) {
       enc = c.data
     }
     c = c.next
   }
   if (enc == v) {
-    console.log(enc)
+    return 'Elemento ' + enc + ' encontrado'
   } else {
-    console.log("no encotrado")
+    return 'Elemento no encontrado'
   }
 }
 export function getTail() {
@@ -75,7 +69,7 @@ export function getTail() {
 function InsertAfter(v, o) {
   let c = this.head
   let aux;
-  while (c) {//exists
+  while (c) {
     if (v == c.data) {
       aux = c.next
       c.next = o
@@ -85,23 +79,25 @@ function InsertAfter(v, o) {
   }
 }
 function InsertBefore(v, o) {
-  let c = this.head
-  let prev, aux
+  let c = this.head, ant, help
   if (c.next == null) {
     this.prepend(o)
-  } else {
+  } 
+  else {
     if (v != this.head.data) {
-      while (c) {//exists
+      while (c) {
         if (v != c.data) {
-          prev = c
-        } else {
-          aux = prev.next
-          prev.next = o
-          o.next = aux
+          ant = c
+        } 
+        else {
+          help = ant.next
+          ant.next = o
+          o.next = help
         }
         c = c.next
       }
-    } else {
+    } 
+    else {
       this.prepend(o)
     }
   }
