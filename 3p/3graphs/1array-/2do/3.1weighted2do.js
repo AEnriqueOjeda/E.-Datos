@@ -12,9 +12,8 @@ let i, j;
 let n = '';
 for (i = 0; i < undirected.length; i++) {
   for (j = 0; j < undirected.length; j++) {
-    n = n + undirected[i][j] + ',';
+    n = n + undirected[i][j] + ', ';
   }
   console.log(n)
   n = ''
-}  
-// *yo la hice
+}

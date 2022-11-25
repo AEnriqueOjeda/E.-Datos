@@ -3,7 +3,14 @@
 //
 // pick one:
 // binary search tree
-//
+
+//optional
+
+//Marcial Vazquez Luis Oswaldo
+//Moran Hernández Carlos Antonio
+//Ojeda Bejarano Angel Enrique
+//Vega puentes Óscar Antonio
+//Vizcaino Lupian Alejandro
 
 import { Arbol, Hoja } from '../../../aeob/linked/trees/2.js'
 

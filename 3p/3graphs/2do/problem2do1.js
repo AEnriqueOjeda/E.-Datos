@@ -1,8 +1,13 @@
 //
 // your undirected graph solution here
 //
+//Marcial Vazquez Luis Oswaldo
+//Moran Hernández Carlos Antonio
+//Ojeda Bejarano Angel Enrique
+//Vega puentes Óscar Antonio
+//Vizcaino Lupian Alejandro
 
-import { grafo } from '../../../lahv/linked/Graphs/clase.js'
+import { grafo } from '../../../aeob/linked/graphs/1.js'
 
 var graph = new grafo(5)
 graph.addEdge(1, 2)

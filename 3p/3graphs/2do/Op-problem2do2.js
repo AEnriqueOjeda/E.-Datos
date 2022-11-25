@@ -6,9 +6,13 @@
 // dfs on an undirected graph
 // bfs on an undirected graph
 //
+//Marcial Vazquez Luis Oswaldo
+//Moran Hernández Carlos Antonio
+//Ojeda Bejarano Angel Enrique
+//Vega puentes Óscar Antonio
+//Vizcaino Lupian Alejandro
 
-
-import { grafo } from '../../../lahv/linked/Graphs/clase2.js'
+import { grafo } from '../../../aeob/linked/graphs/2.js'
 
 var graph = new grafo(5)
 graph.addEdge(1, 2)

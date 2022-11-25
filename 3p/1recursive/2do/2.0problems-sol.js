@@ -6,15 +6,15 @@ function fibonacci_rec(num) {
     return fibonacci_rec(num - 1) + fibonacci_rec(num - 2);
   }
 }
+
 function fib(n) {
   for (let i = 1; i <= n; i++) {
     console.log(fibonacci_rec(i));
   }
 }
-console.log("Secuencia Fibonacci")
-fib(5)
+console.log("Fibonacci")
+fib(6)
 
-//Potencias
 function power(x, n) {
   var r = 1;
   if (n === 0) {
@@ -27,7 +27,6 @@ function power(x, n) {
 console.log("Potencias")
 console.log(power(2, 3))
 
-//Factoriales
 function factorial(x) {
   if (x === 0 || x === 1)
     return 1

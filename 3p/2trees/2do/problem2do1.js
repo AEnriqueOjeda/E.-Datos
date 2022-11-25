@@ -1,6 +1,13 @@
 //
 // your binary tree solution here
 //
+
+//Marcial Vazquez Luis Oswaldo
+//Moran Hernández Carlos Antonio
+//Ojeda Bejarano Angel Enrique
+//Vega puentes Óscar Antonio
+//Vizcaino Lupian Alejandro
+
 import { Arbol, Hoja } from '../../../aeob/linked/trees/1.js'
 
 let tree = new Arbol()

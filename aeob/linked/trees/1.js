@@ -25,7 +25,7 @@ function Insert(t, r, b) {
       } else if (t.Right === null) {
         t.Right = b
       }else{
-        console.log("No se pueden introducir mas valores")
+        console.log("No introducir valores")
       }
     }else{
       Insert(t.Left, r, b)

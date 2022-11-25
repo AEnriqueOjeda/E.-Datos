@@ -16,5 +16,4 @@ function Weight(x, y) {
   }
   console.log(s)
 }
-
 Weight(graph, 'A')
