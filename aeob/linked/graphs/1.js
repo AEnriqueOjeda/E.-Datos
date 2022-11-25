@@ -1,5 +1,4 @@
 export { grafo }
-
 function grafo(v) {
   this.vertice = v;
   this.edges = 0;

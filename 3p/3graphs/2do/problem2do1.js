@@ -9,7 +9,7 @@
 
 import { grafo } from '../../../aeob/linked/graphs/1.js'
 
-var graph = new grafo(5)
+let graph = new grafo(5)
 graph.addEdge(1, 2)
 graph.addEdge(1, 3);
 graph.addEdge(2, 3);

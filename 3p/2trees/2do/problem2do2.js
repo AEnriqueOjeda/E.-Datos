@@ -14,8 +14,7 @@
 
 import { Arbol, Hoja } from '../../../aeob/linked/trees/2.js'
 
-let tree = new Arbol();
-let sheet = new Hoja(10);
+let tree = new Arbol(), sheet = new Hoja(10);
 
 tree.Insert(sheet, 10, new Hoja(5));
 tree.Insert(sheet, 10, new Hoja(15));

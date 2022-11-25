@@ -5,7 +5,7 @@ function Node(o) { //comenzando por izquierda
 }
 function preorder(n) { //comenzando por izquierda
   if (n) {
-    console.log(n.d)
+    console.log(n.d) //imprimimos al de llegar
     preorder(n.l)
     preorder(n.r)
   }
@@ -13,7 +13,7 @@ function preorder(n) { //comenzando por izquierda
 function inorder(n) { //comenzando por izquierda
   if (n) {
     preorder(n.l)
-    console.log(n.d)
+    console.log(n.d) //imprimimos entre la llegada
     preorder(n.r)
   }
 }
@@ -21,29 +21,29 @@ function posorder(n) { //comenzando por izquierda
   if (n) {
     preorder(n.l)
     preorder(n.r)
-    console.log(n.d)
+    console.log(n.d) //imprimimos al salir
   }
 }
 
-function preorder2(n) { //comenzando por derecha
+function preorder_D(n) { //comenzando por derecha
   if (n) {
-    console.log(n.d)
+    console.log(n.d) //imprimimos al de llegar
     preorder(n.r)
     preorder(n.l)
   }
 }
-function inorder2(n) { // comenzando por derecha
+function inorder_D(n) { // comenzando por derecha
   if (n) {
     preorder(n.r)
-    console.log(n.d)
+    console.log(n.d) //imprimimos entre la llegada
     preorder(n.l)
   }
 }
-function posorder2(n) { // comenzando por derecha
+function posorder_D(n) { // comenzando por derecha
   if (n) {
     preorder(n.r)
     preorder(n.l)
-    console.log(n.d)
+    console.log(n.d) //imprimimos al salir
   }
 }
 

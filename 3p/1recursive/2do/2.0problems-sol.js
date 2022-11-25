@@ -1,19 +1,19 @@
-function fibonacci_rec(num) {
+function fibonacci(num) {
   if (num < 2) {
     return num;
   }
   else {
-    return fibonacci_rec(num - 1) + fibonacci_rec(num - 2);
+    return fibonacci(num - 1) + fibonacci(num - 2);
   }
 }
 
 function fib(n) {
   for (let i = 1; i <= n; i++) {
-    console.log(fibonacci_rec(i));
+    console.log(fibonacci(i));
   }
 }
 console.log("Fibonacci")
-fib(6)
+fib(5)
 
 function power(x, n) {
   var r = 1;

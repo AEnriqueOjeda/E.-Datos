@@ -10,8 +10,7 @@
 
 import { Arbol, Hoja } from '../../../aeob/linked/trees/1.js'
 
-let tree = new Arbol()
-let sheet = new Hoja(1)
+let tree = new Arbol(), sheet = new Hoja(1)
 
 tree.Insert(sheet, 1, new Hoja(2))
 tree.Insert(sheet, 1, new Hoja(3))
